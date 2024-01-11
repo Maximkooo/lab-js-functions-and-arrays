@@ -10,6 +10,7 @@ console.log(maxOfTwoNumbers(4, 7));
 const words = ["mystery", "brother", "aviator", "crocodile", "pearl", "orchard", "crackpot"];
 
 function findLongestWord(arr) {
+  if (!arr.length) return 0
   return arr.sort((a, b) => b.length - a.length)[0]
 }
 
@@ -21,7 +22,7 @@ console.log(findLongestWord(words));
 // Iteration 3 | Sum Numbers
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {
+function sumNumbers(numbers) {
   return numbers.reduce((acc, curr) => acc + curr, 0)
 }
 console.log(sumNumbers(numbers));
@@ -34,6 +35,7 @@ console.log(sumNumbers(numbers));
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(arr) {
+  if (!arr.length) return 0
   return sumNumbers(arr) / arr.length
 }
 console.log(averageNumbers(numbers2));
